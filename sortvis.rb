@@ -5,20 +5,20 @@
 class Sortvis < Formula
   desc ""
   homepage ""
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hamao0820/sortvis/releases/download/v0.3.2/sortvis_Darwin_x86_64.tar.gz"
-      sha256 "ddd84b1a0257139251396928c32d876b50ded98d4bf31d2bd1fc80f9ae84a3bb"
+      url "https://github.com/hamao0820/sortvis/releases/download/v0.3.3/sortvis_Darwin_x86_64.tar.gz"
+      sha256 "178040a7b69628524876cd0d8921e29ae91c3592968170f97321ac41523ddef1"
 
       def install
         bin.install "sortvis"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hamao0820/sortvis/releases/download/v0.3.2/sortvis_Darwin_arm64.tar.gz"
-      sha256 "95bc729a4a3301a4f198651f6c2b9c1defa8c8b24c9ca1c6299ca2c7f45f9f24"
+      url "https://github.com/hamao0820/sortvis/releases/download/v0.3.3/sortvis_Darwin_arm64.tar.gz"
+      sha256 "4065780ad6744b1454efb142814eae7ca7a0cb612adbc0b460a53ad0438af821"
 
       def install
         bin.install "sortvis"
@@ -28,16 +28,16 @@ class Sortvis < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hamao0820/sortvis/releases/download/v0.3.2/sortvis_Linux_arm64.tar.gz"
-      sha256 "5d5fb02e87ac97d1053ff9a1b776a3ee7a75a8c4ecd8d805c6d0d53fc9ab43f7"
+      url "https://github.com/hamao0820/sortvis/releases/download/v0.3.3/sortvis_Linux_arm64.tar.gz"
+      sha256 "3f3ddbb19418713e3f57bece60a02e844f561543c226f991371d44a5085811ac"
 
       def install
         bin.install "sortvis"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hamao0820/sortvis/releases/download/v0.3.2/sortvis_Linux_x86_64.tar.gz"
-      sha256 "1f874601b341ab3a1f5fe22baa6a2e81d3b2b0a20309e3929be3e473cf4b46a8"
+      url "https://github.com/hamao0820/sortvis/releases/download/v0.3.3/sortvis_Linux_x86_64.tar.gz"
+      sha256 "7dd4baa351babe72a373980731f01c9d7334a6bdd422c6188f29f0c38a411fb0"
 
       def install
         bin.install "sortvis"
