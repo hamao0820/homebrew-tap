@@ -5,20 +5,20 @@
 class Sortvis < Formula
   desc ""
   homepage ""
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/hamao0820/sortvis/releases/download/v0.4.0/sortvis_Darwin_arm64.tar.gz"
-      sha256 "711ef6682dd36de749be5c3039caee4c9042beb70e4857b19955d385b0e5d644"
+    if Hardware::CPU.intel?
+      url "https://github.com/hamao0820/sortvis/releases/download/v0.4.1/sortvis_Darwin_x86_64.tar.gz"
+      sha256 "c8526ce9ea6f8c5c65f955ee23a7711b13d05c45a0ca3a59befe79317c3c08c9"
 
       def install
         bin.install "sortvis"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/hamao0820/sortvis/releases/download/v0.4.0/sortvis_Darwin_x86_64.tar.gz"
-      sha256 "605d3836b5b2a13aff4eeee595507067f76f92295a2d9c6ed4e2229559524ee4"
+    if Hardware::CPU.arm?
+      url "https://github.com/hamao0820/sortvis/releases/download/v0.4.1/sortvis_Darwin_arm64.tar.gz"
+      sha256 "d8fe7ae801323241be5b0a7bc3962c35e4047091749e92883a56c4299c490b5f"
 
       def install
         bin.install "sortvis"
@@ -27,17 +27,17 @@ class Sortvis < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hamao0820/sortvis/releases/download/v0.4.0/sortvis_Linux_arm64.tar.gz"
-      sha256 "a6a5ecc3f7cb993b073c56fc8f797a8385f66de8237049e25da0b7fde8412a37"
+    if Hardware::CPU.intel?
+      url "https://github.com/hamao0820/sortvis/releases/download/v0.4.1/sortvis_Linux_x86_64.tar.gz"
+      sha256 "edb75e1cc849fb4ffa08e32c57a0b35c99477a633f75bbb8b68501d999afc495"
 
       def install
         bin.install "sortvis"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/hamao0820/sortvis/releases/download/v0.4.0/sortvis_Linux_x86_64.tar.gz"
-      sha256 "9c15cbeb8b0bc10f7b63281a48bd5526cd0c54c7dec7002aa78b0e4c54ea5318"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/hamao0820/sortvis/releases/download/v0.4.1/sortvis_Linux_arm64.tar.gz"
+      sha256 "c9f599fbc11f1330990ba576f47df21525e0db564ae28b2ee3fa7fd714d23117"
 
       def install
         bin.install "sortvis"
